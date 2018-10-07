@@ -20,7 +20,7 @@ public class Test {
 			}
 			Connection connection = null;
 			try {
-				connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/readexcel?userUnicode=true&characterEncoding=UTF-8","root","root");
+				connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/readexcel?userUnicode=true&characterEncoding=UTF-8","root",null);
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -35,7 +35,7 @@ public class Test {
 			int i = 0;
 	
 			try {
-				i = readExcel.readExcelToMysql("D://ChoiceInfo.XLS");
+				i = readExcel.readExcelToMysql("D://sheet1.xlsx");
 			} catch (Exception e) {
 				e.printStackTrace();
 				try {
